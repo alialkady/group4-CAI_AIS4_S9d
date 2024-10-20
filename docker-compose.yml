@@ -60,8 +60,8 @@ services:
     image: asami76/hadoop3
     container_name: hadoop
     ports:
-      - "9870:9870"  # Web UI for HDFS
-      - "8088:8088"  # ResourceManager
+      - "9870:9870"  
+      - "8088:8088"  
     command: /etc/bootstrap.sh -bash
     tty: true
 
@@ -69,7 +69,7 @@ services:
     image: bitnami/spark
     container_name: spark
     ports:
-      - "8080:8080"  # Web UI for Spark
+      - "8080:8080"  
     environment:
       - SPARK_MODE=master
     tty: true
